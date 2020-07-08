@@ -1,0 +1,37 @@
+{
+    "type": "entityDebugOverlay",
+    "skin": "debugOverlay",
+    "contents": {
+        "type": "relativeLayout",
+        "contents": [
+            {
+                "type": "UILabel",
+                "id": "label1",
+                "layoutInfo": {
+                    "use-content-width": true,
+                    "use-content-height": true,
+                    "position-top": {
+                        "offset": 40
+                    },
+                    "position-right": {
+                        "offset": 16
+                    }
+                }
+            },
+            {
+                 "type": "UILabel",
+                 "id": "label2",
+                 "layoutInfo": {
+                     "use-content-width": true,
+                     "use-content-height": true,
+                     "position-top": {
+                         "offset": 20
+                     },
+                     "position-right": {
+                         "offset": 16
+                     }
+                }
+            }
+        ]
+    }
+}
