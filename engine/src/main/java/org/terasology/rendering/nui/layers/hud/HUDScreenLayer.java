@@ -18,6 +18,8 @@ package org.terasology.rendering.nui.layers.hud;
 import com.google.common.collect.Maps;
 import org.joml.Rectanglei;
 import org.joml.Vector2i;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.terasology.assets.ResourceUrn;
 import org.terasology.assets.management.AssetManager;
 import org.terasology.math.JomlUtil;
@@ -40,6 +42,7 @@ import java.util.Optional;
  */
 public class HUDScreenLayer extends CoreScreenLayer {
 
+    private static final Logger logger = LoggerFactory.getLogger(HUDScreenLayer.class);
     private Map<ResourceUrn, HUDElement> elementsLookup = Maps.newLinkedHashMap();
 
     @In
@@ -56,6 +59,7 @@ public class HUDScreenLayer extends CoreScreenLayer {
         if (data.isPresent() && type.isInstance(data.get().getRootWidget())) {
             return addHUDElement(data.get().getUrn(), type.cast(data.get().getRootWidget()), region);
         }
+
         return null;
     }
 
